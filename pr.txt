@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "pr.dtd">
+<pr>
+    <meta>
+        <key>Teste</key>
+        <title>Teste PRI 2020</title>
+        <subtitle>Explicação dos exercicios realizados no teste</subtitle>
+        <bdate>18-Jan-2021</bdate>
+        <edate>18-Jan-2021</edate>
+        <supervisor url="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a83930">
+            <name>Luis Miguel Arieira Ramos</name>
+            <email>a83930@alunos.uminho.pt</email>
+            <url>https://github.com/LuisRamos99</url>
+        </member>
+    </team>
+    <abstract>
+        <p> 
+        	No exercicio 1, foi utilizada a base de dados MongoDB para guardar de forma persistente todas as transações realizadas pelo programa.
+        	Para corrigir o ficheiro json foi usado um script que está incluido na pasta "ex1".
+        	O codigo usado para importar a BD foi o seguinte:
+        	mongoimport --db Casamentos --collection casamentos --file casamentos2.json --jsonArray
+        </p>
+        <p> 
+        	No exercicio 2, foi utilizada a porta 8001 e as views foram criadas em pug.
+        </p>
+        <p>
+            Todos os ficheiros do teste estão disponibilizados no repositório público presente na página do autor, no <link url="https://github.com/LuisRamos99/PRI2020/tree/master/Teste">GitHub</link>.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="https://github.com/LuisRamos99/PRI2020/tree/master/Teste">Código sobre o teste</link>
+    </deliverables>
+</pr>
