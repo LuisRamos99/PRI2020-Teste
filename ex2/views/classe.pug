@@ -1,0 +1,53 @@
+extends layout
+
+block content
+ .w3-card-4
+  header.w3-container.w3-teal
+   h1 Classe #{codigo}
+  table.w3-table-all
+    tr
+      th Nivel
+      th Status
+      th Titulo
+      th Descrição
+    tr
+      td= list.nivel
+      td= list.status
+      td= list.titulo
+      td= list.descricao  
+  if (list.filhos.length>0)
+   .w3-card-4
+    header.w3-container.w3-teal
+      h2 Filhos 
+    table.w3-table-all
+      tr
+        th Código
+        th Título
+        th ID
+        th Status
+      each filho in list.filhos
+        tr
+         td
+           a(href='/classe/c'+ filho.codigo) #{filho.codigo}
+         td= filho.titulo
+         td
+           a(href=filho.id) #{filho.id}
+         td= filho.status
+  if (list.nivel=="3") 
+   .w3-card-4
+     header.w3-container.w3-teal
+      h2 Processos   
+     table.w3-table-all
+      tr
+        th Código
+        th Título
+      each processo in proc
+        tr
+         td
+           a(href='/processo/' + processo.codigo) #{processo.codigo}
+         td= processo.titulo
+  a(href=`/`) 
+    button(class="w3-btn w3-teal" type="submit" style="margin:20px") Voltar ao inicio
+  if (list.pai.codigo)
+    a(href=`/classe/c`+ list.pai.codigo) 
+     button(class="w3-btn w3-teal" type="submit" style="margin:20px") Voltar atrás
